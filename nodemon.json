@@ -1,0 +1,6 @@
+{
+  "watch": ["src/lib"],
+  "ext": "ts",
+  "exec": "ts-node src/lib/telegram-bot.ts",
+  "ignore": ["src/lib/*.test.ts"]
+}
