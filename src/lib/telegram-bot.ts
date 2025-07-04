@@ -17,7 +17,6 @@ export async function notifyNewSubmission(submission: Submission) {
   }
 }
 
-// Инициализация бота при запуске файла напрямую
 if (require.main === module) {
   initTelegramBot();
 }
