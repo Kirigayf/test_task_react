@@ -3,7 +3,6 @@ import sqlite3 from 'sqlite3';
 import { open } from 'sqlite';
 import path from 'path';
 import { notifyNewSubmission } from '@/lib/telegram-bot';
-import { Submission } from '../../types/database';
 
 import '@/lib/init';
 
@@ -31,10 +30,8 @@ export async function POST(request: Request) {
       [name, email, phone]
     );
 
-    // Получаем только что добавленную запись
     const newSubmission = {id: result.lastID!, name, email, phone}
 
-    // Отправляем уведомление
     if (newSubmission) {
       await notifyNewSubmission(newSubmission);
     }

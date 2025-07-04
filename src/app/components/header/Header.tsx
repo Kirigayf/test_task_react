@@ -69,7 +69,6 @@ export default function Header() {
         )}
       </section>
 
-      {/* Mobile menu */}
       {isMobile && isMenuOpen && (
         <div className="mt-4 pb-4">
           <nav className="flex flex-col gap-y-4">
