@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { FormSubmission, FormSubmitStatus } from "@/types/database";
+import { FormSubmission, FormSubmitStatus } from "../../types/database";
 
 export default function CTASection() {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
@@ -17,7 +17,6 @@ export default function CTASection() {
   const [submitStatus, setSubmitStatus] = useState<FormSubmitStatus | null>(null);
 
   useEffect(() => {
-    // Проверяем валидность формы при каждом изменении данных
     const errors: Partial<FormSubmission> = {};
     
     if (!formData.name.trim()) {
